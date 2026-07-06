@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { toast, Toaster } from "sonner";
 import { profile } from "../data/portfolio";
 import { CONTACT } from "../constants/testIds";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const EMAILJS_SERVICE_ID = "service_e46ia1w";
+const EMAILJS_TEMPLATE_ID = "template_6lxj5je";
+const EMAILJS_PUBLIC_KEY = "8TO-0Hd1XNifUf1vi";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -23,13 +25,22 @@ export default function Contact() {
     }
     setLoading(true);
     try {
-      await axios.post(`${API}/contact`, form);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject || "Portfolio Contact",
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
       setSubmitted(true);
-      toast.success("Message sent! I&#39;ll get back to you soon.");
+      toast.success("Message sent! I'll get back to you soon.");
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
-      const msg = err?.response?.data?.detail || "Something went wrong. Please try again.";
-      toast.error(msg);
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
