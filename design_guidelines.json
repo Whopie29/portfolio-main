@@ -1,0 +1,137 @@
+{
+  "theme_and_archetype": {
+    "theme": "DARK",
+    "archetype": "Archetype 5 (Luxury) - Cinematic Cosmic Variant",
+    "reasoning": "The user requested an immersive dark futuristic/cosmic theme, but explicitly avoiding generic purple. Archetype 5 provides the cinematic depth, grain, and high-end feel needed for a top-tier engineering portfolio. Deep space blues, obsidian blacks, and stellar contrast create a memorable, professional vibe suitable for an AI/ML Engineer."
+  },
+  "typography": {
+    "strategy": "The 'Editorial Future' pairing: Wide Geometric Sans for headings, clean Sans for body, and Monospace for technical data points.",
+    "fonts": {
+      "headings": {
+        "family": "Outfit",
+        "weights": ["300", "700", "900"],
+        "css_class": "font-sans",
+        "fallback": "sans-serif"
+      },
+      "body": {
+        "family": "Manrope",
+        "weights": ["400", "500"],
+        "css_class": "font-body",
+        "fallback": "sans-serif"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "weights": ["400"],
+        "css_class": "font-mono",
+        "fallback": "monospace"
+      }
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1]",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "body": "text-base sm:text-lg leading-relaxed text-slate-300",
+      "labels": "text-xs uppercase tracking-[0.2em] font-mono text-cyan-400"
+    }
+  },
+  "color_palette": {
+    "background": {
+      "base": "#020617",
+      "surface": "rgba(255, 255, 255, 0.03)",
+      "surface_hover": "rgba(255, 255, 255, 0.08)"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#475569"
+    },
+    "accents": {
+      "primary": "#00E5FF",
+      "primary_glow": "rgba(0, 229, 255, 0.3)",
+      "secondary": "#FFB800",
+      "secondary_glow": "rgba(255, 184, 0, 0.3)"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "active": "rgba(0, 229, 255, 0.3)"
+    }
+  },
+  "spacing_and_layout": {
+    "strategy": "Generous Spacing + Asymmetric 'Bento' Grids. Extensive use of negative space to let the 3D canvas breathe.",
+    "containers": "max-w-7xl mx-auto px-6 lg:px-12",
+    "section_padding": "py-24 sm:py-32 lg:py-40",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 lg:gap-8",
+    "surfaces": "Crystal Glassmorphism: backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] rounded-2xl"
+  },
+  "components_and_motion": {
+    "libraries": [
+      "framer-motion",
+      "@react-three/fiber",
+      "@react-three/drei",
+      "three",
+      "lucide-react",
+      "@studio-freight/react-lenis",
+      "react-fast-marquee"
+    ],
+    "animations": {
+      "scroll": "Lenis smooth scrolling with momentum. Framer Motion for scroll-triggered fades (y: 50 -> 0, opacity 0 -> 1).",
+      "hover": "Cards lift slightly (-translate-y-2), borders glow with accent color, text contrast increases.",
+      "3d_scene": "React Three Fiber canvas prominently in the Hero. Use floating particles (stars/dust) and an interactive cosmic object (like a glowing AI node sphere) that reacts to mouse coordinates via useFrame."
+    },
+    "ui_elements": {
+      "buttons": "Glassmorphic buttons with an inner 1px border. Hover state triggers a glow effect.",
+      "cards": "Neumorphic dark glass. Use 'Tracing Beam' or subtle ambient glow on hover.",
+      "skills_marquee": "Infinite smooth drift of technical skills. Font mono or massive sans, opacity-20 to act as a moving texture."
+    }
+  },
+  "content_mapping": {
+    "profile": {
+      "name": "Gaurav Malik",
+      "tagline": "AI/ML Engineer | CS-AIML Student",
+      "links": {
+        "github": "https://github.com/Whopie29",
+        "linkedin": "https://www.linkedin.com/in/gauravmalik29/",
+        "leetcode": "https://leetcode.com/u/Whopie/",
+        "gfg": "https://www.geeksforgeeks.org/profile/gauravmallz0v",
+        "codolio": "https://codolio.com/profile/JNePbOod"
+      }
+    },
+    "skills": ["Python", "C++", "TensorFlow", "PyTorch", "LangChain", "Streamlit", "Flask", "MySQL", "MongoDB", "Git"],
+    "projects": ["Data Wizard", "Spendify", "Trippy Trip"],
+    "achievements": ["LeetCode 1600+", "GFG 1800+", "DSA competition 2nd place"]
+  },
+  "media_and_images": {
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/37269529/pexels-photo-37269529.jpeg",
+        "category": "background",
+        "description": "Vibrant cosmic nebula. Can be used as an overlay texture for deep space aesthetics."
+      },
+      {
+        "url": "https://images.pexels.com/photos/14314636/pexels-photo-14314636.jpeg",
+        "category": "project_placeholder",
+        "description": "Abstract neural network layout. Ideal for the 'Data Wizard' project card background."
+      },
+      {
+        "url": "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg",
+        "category": "project_placeholder",
+        "description": "Dark data dashboard interface. Ideal for the 'Spendify' project card."
+      },
+      {
+        "url": "https://images.pexels.com/photos/30547577/pexels-photo-30547577.jpeg",
+        "category": "project_placeholder",
+        "description": "Abstract digital circuits. Ideal for the 'Trippy Trip' project card."
+      }
+    ],
+    "image_treatment": "All images must feature a heavy gradient overlay (e.g., bg-gradient-to-t from-[#020617] to-transparent) to ensure the text remains legible while fitting the dark cosmic theme."
+  },
+  "instructions_to_main_agent": {
+    "1_setup": "Use standard React (.js). Install Tailwind and required libraries: @react-three/fiber @react-three/drei three framer-motion @studio-freight/react-lenis lucide-react react-fast-marquee.",
+    "2_layout": "Wrap the App in the Lenis scroller. Create a fixed navbar with backdrop-blur. Include all social links and a clear 'Download Resume' PDF button.",
+    "3_3d_hero": "Implement an R3F `<Canvas>` as the hero background. Use `<Stars />` and an interactive 3D object (a glowing sphere or node structure) representing AI/ML models that rotates based on mouse position.",
+    "4_sections": "Build 'About', 'Skills' (using react-fast-marquee), 'Projects' (using Bento grid logic), 'Achievements', and 'Experience' sections. Ensure 3D aesthetic continuity (dark space, glassmorphic cards).",
+    "5_contact": "Develop a functional contact form utilizing Resend (via an API endpoint in your server logic). Design inputs with high-contrast active/focus states.",
+    "6_testing": "Ensure EVERY interactive element has a `data-testid` attribute (e.g., `data-testid='resume-download-btn'`, `data-testid='contact-submit-btn'`).",
+    "7_styling": "CRITICAL: AVOID generic purple gradients entirely. Stick to `#020617` (Deep Obsidian Blue), Starlight Silver, and Cyan/Gold accents."
+  }
+}

@@ -1,0 +1,8 @@
+/* App-specific styles (kept minimal - most in index.css) */
+.App {
+  min-height: 100vh;
+  background: #020617;
+  color: #F8FAFC;
+  position: relative;
+  overflow-x: hidden;
+}

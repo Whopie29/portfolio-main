@@ -1,0 +1,30 @@
+{
+  "summary": "First-finish smoke test for Gaurav Malik 3D portfolio. Backend (6 checks) and frontend (contact form + nav + 3D + sections + resume) all working. Emergent Resend integration confirmed via 202 Accepted in logs.",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ -> 200 {message: Portfolio API is live}",
+    "GET /api/profile -> 200 with correct links (github/linkedin/leetcode/gfg/codolio)",
+    "POST /api/contact valid payload -> 200 success, MongoDB contact_messages persisted (verified via mongosh count=1)",
+    "POST /api/contact invalid email -> 422 pydantic validation",
+    "POST /api/contact empty name+message -> 422 validation",
+    "Emergent Resend: 2x POST integrations.emergentagent.com/api/v1/email/send -> 202 Accepted (owner + visitor ack) verified in backend logs",
+    "Resume PDF HEAD /Gaurav_Malik_Resume.pdf -> HTTP/2 200, content-type application/pdf",
+    "Frontend loads at REACT_APP_BACKEND_URL with 0 pageerrors, 3D canvas rendered",
+    "All nav testids present (home/about/skills/projects/achievements/contact/resume) and smooth-scroll to contact works",
+    "All 5 hero social hrefs match profile.links exactly",
+    "All sections rendered: about/skills/projects/achievements/contact/experience",
+    "3 project cards present (project-card-0/1/2)",
+    "Achievements show LeetCode 1600, GFG 1800, and 2nd place text",
+    "Contact form full E2E: fill+submit -> success toast + contact-success-msg='Message received. Talk soon!' + form resets",
+    "Empty-field submit does not crash; blocked by native HTML5 required validation"
+  ],
+  "failed": [],
+  "notes": [
+    "Hero brand logo renders as stylized 'gaurav.malik' (lowercase with dot) rather than literal 'Gaurav Malik' string; visible and intentional per design.",
+    "Empty submit is blocked by browser-native HTML5 'required' tooltip rather than a custom error toast/contact-error-msg element — no crash, safe UX."
+  ],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
