@@ -40,7 +40,7 @@ export default function Hero() {
           className="text-eyebrow flex items-center gap-3"
         >
           <span className="w-8 h-px bg-cyan-400" />
-          Portfolio · 2025
+          Portfolio · 2026
         </motion.p>
 
         <motion.h1
