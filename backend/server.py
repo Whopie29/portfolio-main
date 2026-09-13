@@ -201,6 +201,16 @@ async def get_profile():
             "gfg": "https://www.geeksforgeeks.org/profile/gauravmallz0v",
             "codolio": "https://codolio.com/profile/JNePbOod",
         },
+        "experience": [
+            {
+                "company": "Capgemini",
+                "role": "Software Engineer Intern",
+                "period": "April 2026 – June 2026",
+                "location": "Gurugram, Haryana",
+                "type": "Internship",
+                "skills": ["Power BI", "Oracle Database", "Python", "Data Analysis"],
+            }
+        ],
     }
 
 

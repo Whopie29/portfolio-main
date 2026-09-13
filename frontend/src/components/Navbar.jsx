@@ -6,8 +6,10 @@ const links = [
   { id: "home", label: "Home", testId: NAV.linkHome },
   { id: "about", label: "About", testId: NAV.linkAbout },
   { id: "skills", label: "Skills", testId: NAV.linkSkills },
+  { id: "experience", label: "Experience", testId: NAV.linkExperience },
   { id: "projects", label: "Projects", testId: NAV.linkProjects },
   { id: "achievements", label: "Achievements", testId: NAV.linkAchievements },
+  { id: "timeline", label: "Timeline", testId: NAV.linkTimeline },
   { id: "contact", label: "Contact", testId: NAV.linkContact },
 ];
 
@@ -37,12 +39,8 @@ export default function Navbar() {
         <button
           data-testid={NAV.logo}
           onClick={() => go("home")}
-          className="flex items-center gap-2 group"
+          className="flex items-center group"
         >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-60 animate-ping"></span>
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-400"></span>
-          </span>
           <span className="font-display font-bold text-lg tracking-tight text-white group-hover:text-cyan-300 transition">
             gaurav<span className="text-cyan-400">.malik</span>
           </span>

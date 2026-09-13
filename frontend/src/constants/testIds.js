@@ -6,6 +6,8 @@ export const NAV = {
   linkSkills: "nav-link-skills",
   linkProjects: "nav-link-projects",
   linkAchievements: "nav-link-achievements",
+  linkExperience: "nav-link-experience",
+  linkTimeline: "nav-link-timeline",
   linkContact: "nav-link-contact",
   resumeDownload: "nav-resume-download",
 };
@@ -40,5 +42,9 @@ export const PROJECTS = {
 export const SKILLS = { section: "skills-section" };
 export const ABOUT = { section: "about-section" };
 export const ACHIEVEMENTS = { section: "achievements-section" };
-export const EXPERIENCE = { section: "experience-section" };
+export const EXPERIENCE = {
+  section: "experience-section",
+  card: (idx) => `experience-card-${idx}`,
+};
 export const FOOTER = { root: "footer-root", resumeDownload: "footer-resume-download" };
+

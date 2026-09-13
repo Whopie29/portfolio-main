@@ -20,7 +20,7 @@ export default function Achievements() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-eyebrow">04 / Achievements</p>
+          <p className="text-eyebrow">05 / Achievements</p>
           <h2 className="mt-4 font-display font-bold text-4xl sm:text-5xl tracking-tight leading-[1.05]">
             Numbers that <span className="gradient-text">back the story.</span>
           </h2>

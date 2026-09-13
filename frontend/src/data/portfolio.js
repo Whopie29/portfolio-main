@@ -7,7 +7,7 @@ export const profile = {
   location: "Greater Noida, India",
   email: "gauravmalik81809@gmail.com",
 
-  bio: "I'm a Computer Science (AI & ML) undergrad at NIET, obsessed with turning messy data into clean, useful intelligence. I build with Python, TensorFlow, PyTorch, and LangChain — from statistical EDA to LSTM forecasts to agent-driven planners. When I'm not shipping, I'm grinding DSA (1600+ on LeetCode, 1800+ on GFG).",
+  bio: "I'm Gaurav, a Computer Science (AI/ML) graduate who is more interested in building things than collecting technologies.\n\nI enjoy taking an idea apart, understanding the problem underneath it, and then putting it back together as something people can actually use. I've worked across AI, data analysis, forecasting, full-stack development, and real-time applications.\n\nI also have a habit of adding one unnecessary feature to every project just because my brain asked, “But wouldn't it be cool if…?”\n\nSometimes it is. Sometimes it's a three-day debugging session. Either way, I learn something.",
   links: {
     github: "https://github.com/Whopie29",
     linkedin: "https://www.linkedin.com/in/gauravmalik29/",
@@ -34,10 +34,10 @@ export const education = [
 
 export const skills = {
   Languages: ["Python", "C++", "HTML/CSS", "JS"],
-  Frameworks: ["TensorFlow", "PyTorch", "LangChain", "Streamlit", "Flask", "FFmpeg"],
+  Frameworks: ["TensorFlow", "PyTorch", "LangChain", "Streamlit", "Flask", "Fast API"],
   Databases: ["MySQL", "MongoDB", "Oracle", "PL/SQL"],
-  Core: ["Machine Learning", "Deep Learning", "Data Structures & Algorithms", "Analytics"],
-  Tools: ["Git", "GitHub", "VS Code", "Google Colab", "Power BI", "Databricks", "Claude"],
+  Core: ["Machine Learning", "Deep Learning", "DSA", "Analytics","LLMs","AI Agents"],
+  Tools: ["Git", "GitHub", "VS Code", "Google Colab", "Power BI", "Databricks", "Claude", "Cloudflare"],
 };
 
 export const skillsFlat = [
@@ -49,18 +49,18 @@ export const skillsFlat = [
 
 export const projects = [
   {
-    title: "Data Wizard",
-    subtitle: "Automated EDA & ML Studio",
+    title: "KarwaanRadio",
+    subtitle: "A Musical Journey Through the Himalayas",
     description:
-      "A Streamlit application that turns raw datasets into insight in minutes — 10+ visualizations, 5 deployed ML models with PCA & imputation reaching 92% test accuracy, and 5+ statistical tests (Chi-square, Pearson, Anderson) via scipy/statsmodels.",
-    stack: ["Streamlit", "Pandas", "Seaborn", "Scikit-learn", "SciPy", "Statsmodels"],
-    image: "https://images.pexels.com/photos/14314636/pexels-photo-14314636.jpeg",
+      "Pick a destination, season, and time of day — the whole scene shifts. Parallax mountain scenery, live weather FX, a skeuomorphic cassette player, 8 curated playlist categories, and a glassmorphic bus-window frame. A FastAPI + WebSocket backend powers real-time passenger count and an in-bus live chat so everyone riding along shares the same journey.",
+    stack: ["React", "FastAPI", "WebSockets", "Python", "Framer Motion"],
+    image: "/kaarwaanRadio.png",
     accent: "#00E5FF",
-    link: "https://github.com/Whopie29",
+    link: "https://www.karwaanradio.website/",
     metrics: [
-      { label: "Accuracy", value: "92%" },
-      { label: "ML Models", value: "5" },
-      { label: "Stat Tests", value: "5+" },
+      { label: "Playlists", value: "8" },
+      { label: "Real-time", value: "WS" },
+      { label: "Mode", value: "Live" },
     ],
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
     stack: ["Flask", "LSTM", "ARIMA", "Python", "Pandas"],
     image: "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg",
     accent: "#FFB800",
-    link: "https://github.com/Whopie29",
+    link: "https://github.com/Whopie29/Spendify_",
     metrics: [
       { label: "Effort Cut", value: "80%" },
       { label: "Forecast Acc.", value: "90%" },
@@ -79,21 +79,22 @@ export const projects = [
     ],
   },
   {
-    title: "AllInOne AI",
-    subtitle: "Multi-Modal AI Assistant",
+    title: "FileForge",
+    subtitle: "Smart File Management Platform",
     description:
-      "A unified AI platform combining multiple AI capabilities in one place — chat, image generation, code assistance, and more. Built with modern LLM integrations to deliver a seamless all-in-one AI experience.",
-    stack: ["Python", "LangChain", "LLM APIs", "Streamlit"],
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+      "A modern file management and transformation platform that lets users upload, organize, convert, and process files through a clean web interface. Site is live — built for real-world file workflows with a sleek, intuitive UX.",
+    stack: ["React", "Node.js", "Python", "File APIs", "JavaScript"],
+    image: "/FileForge.png",
     accent: "#8B5CF6",
-    link: "https://github.com/Whopie29/AllinOneAI",
+    link: "https://huggingface.co/spaces/whopie/FileForge",
     metrics: [
-      { label: "AI Modes", value: "Multi" },
-      { label: "Stack", value: "LLM" },
-      { label: "Type", value: "Full-Stack" },
+      { label: "Status", value: "Live" },
+      { label: "Type", value: "Web App" },
+      { label: "Focus", value: "Files" },
     ],
   },
 ];
+
 
 export const achievements = [
   {
@@ -124,29 +125,59 @@ export const certifications = [
   { title: "Getting Started with AI using IBM Watson", issuer: "IBM · Coursera" },
 ];
 
+export const experiences = [
+  {
+    company: "Capgemini",
+    role: "Software Engineer Intern",
+    period: "April 2026 – June 2026",
+    location: "Gurugram, Haryana",
+    type: "Internship",
+    description: [
+      "Worked on developing interactive Power BI dashboards to analyze business data and generate actionable insights.",
+      "Performed data analysis using Python and worked with Oracle Database for querying and managing enterprise data.",
+      "Collaborated on a Power BI project involving data cleaning, visualization, KPI tracking, and report automation.",
+    ],
+    skills: ["Power BI", "Oracle Database", "Python", "Data Analysis"],
+    accent: "#00E5FF",
+  },
+];
+
 export const experienceTimeline = [
+  {
+    year: "2026",
+    title: "Shipped KarwaanRadio",
+    org: "Featured Project · Interactive Web App",
+    detail: "Built an immersive music player with over 500+ songs featuring real-time WebSockets, dynamic scenery shifts, bus ride simulation, and passenger live chat.",
+  },
+  {
+    year: "2026",
+    title: "Software Engineer Intern — Capgemini",
+    org: "Capgemini · Gurugram, Haryana",
+    detail: "Power BI dashboards, Python data analysis & Oracle Database management for enterprise insights and automated reporting.",
+  },
   {
     year: "2026",
     title: "Graduating — B.Tech CSE (AIML)",
     org: "NIET, Greater Noida",
-    detail: "Wrapping up my AI/ML specialization with a capstone rooted in applied deep learning.",
+    detail: "Completing Computer Science Engineering degree with specialization in Artificial Intelligence & Machine Learning.",
   },
   {
     year: "2025",
-    title: "Shipped Trippy Trip",
-    org: "Personal Project",
-    detail: "LangChain-based AI trip planner used by 100+ users.",
+    title: "Built Spendify",
+    org: "Personal Project · AI Finance",
+    detail: "Flask-powered bank account management system cutting manual effort by 80% with LSTM + ARIMA balance forecasting.",
   },
   {
-    year: "2024",
-    title: "Data Wizard + Spendify",
-    org: "Personal Projects",
-    detail: "End-to-end EDA studio and finance forecasting system with LSTM & ARIMA.",
+    year: "2025",
+    title: "Built FileForge",
+    org: "Personal Project · Web App",
+    detail: "Smart file management and conversion platform built with React, Node.js, and Python file workflows.",
   },
   {
-    year: "2023",
-    title: "Deep dive into DSA",
-    org: "LeetCode · GeeksforGeeks",
-    detail: "Crossed 700+ solved problems across platforms; consistent contest participation.",
+    year: "2022–2024",
+    title: "Foundations & GitHub Projects",
+    org: "GitHub · Early Exploration",
+    detail: "Built various exploratory projects, Python utilities, data analysis scripts, and solved 700+ DSA problems across LeetCode & GFG.",
   },
 ];
+
